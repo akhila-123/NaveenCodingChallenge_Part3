@@ -56,7 +56,11 @@ public class TaskCategoriesPage extends TestBase {
 	 * @return <class>com.capsuleCrm.WebPages.CustomFieldsPage</class>
 	 */
 	public CustomFieldsPage OpenCustomFieldsPage() {
-		TestUtil.waitForElement(customFieldsLink);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		customFieldsLink.click();
 		return new CustomFieldsPage();
 	}

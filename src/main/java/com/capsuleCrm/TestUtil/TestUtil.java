@@ -40,7 +40,7 @@ public class TestUtil extends TestBase {
 	public static String timeStamp;
 	/* Explicit wait */
 	public static void waitForElement(WebElement webElement) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 	}
 

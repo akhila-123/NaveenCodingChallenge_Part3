@@ -83,7 +83,7 @@ public class TestCase extends TestBase {
 		return data;
 	}
 
-	@Test(priority = 1, dataProvider = "getPersonAndCaseTestData",enabled = false)
+	@Test(priority = 1, dataProvider = "getPersonAndCaseTestData")
 	public void AgentVerification(String Title, String FirstName, String LastName, String JobTitle, String Organisation,
 			String PersonTag, String PhoneNumber, String EmailId, String Website, String CaseRelatesTo, String Name,
 			String Description, String CaseTags, String Status) {
@@ -165,11 +165,11 @@ public class TestCase extends TestBase {
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//screenshots//screenshot.png"));
-			} catch (IOException e) { // TODO Auto-generated catch block
+			} catch (IOException e) { 
 				e.printStackTrace();
 			}
 		}
-		//driver.quit();
+		driver.quit();
 		System.out.println("**********End Of Test********");
 	}
 
