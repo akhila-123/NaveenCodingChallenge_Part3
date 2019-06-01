@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Naveen Coding challenge Part 3]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.capsuleCrm.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Zoopla Test Cases(failed)">
+    <classes>
+      <class name="com.capsuleCrm.TestCases.TestCase">
+        <methods>
+          <include name="VerifyAccountSettingsOptionsTest" invocation-numbers="0"/>
+          <include name="TearDown"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- com.capsuleCrm.TestCases.TestCase -->
+    </classes>
+  </test> <!-- Zoopla Test Cases(failed) -->
+</suite> <!-- Failed suite [Naveen Coding challenge Part 3] -->

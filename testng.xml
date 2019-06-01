@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Naveen Coding challenge Part 3">
+	<listeners>
+		<listener
+			class-name="com.capsuleCrm.ExtentReportListener.ExtentReportListener" />
+	</listeners>
+	<test name="Zoopla Test Cases">
+		<classes>
+		
+			<class name="com.capsuleCrm.TestCases.TestCase"></class>
+		
+		</classes>
+	</test>
+
+
+</suite>
