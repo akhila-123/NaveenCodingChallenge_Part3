@@ -85,6 +85,7 @@ public class TaskCategoriesPage extends TestBase {
 		String NewCategoryName = NewCategory + TestUtil.gettimestamp();
 		newCategoryName.sendKeys(NewCategoryName);
 		saveBtn.click();
+		TestUtil.waitForElement(customFieldsLink);
 		return NewCategoryName;
 	}
 

@@ -1,5 +1,6 @@
 package com.capsuleCrm.WebPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -27,7 +28,14 @@ public class UsersPage extends TestBase {
 	@FindBy(xpath = Locators.VERIFYUSER_XPATH)
 	WebElement verifyUser;
 	
-
+	@FindBy(xpath = Locators.DELETEUSERNAME_XPATH)
+	WebElement deleteUserName;
+	
+	@FindBy(xpath = Locators.DELETEUSER_XPATH)
+	WebElement deleteUser;
+	
+	@FindBy(xpath = Locators.DELETEUSERBTN_XPATH)
+	WebElement deleteUserBtn;
 
 	/**
 	 * Constructs a new Users Page object, using the driver created in TestBase. It
@@ -55,9 +63,9 @@ public class UsersPage extends TestBase {
 	 */
 
 	public void VerifyHeader(String ExpectedPageHeader) {
-		System.out.println("Users page Header-"+usersPageHeader.getText());
 		String ActualPageHeader = usersPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Users Page Header is not as expected");
+		System.out.println("****Verified the user page header****");
 	}
 	/**
 	 * Clicks on Add new User link of User Page and It then waits for
@@ -67,6 +75,11 @@ public class UsersPage extends TestBase {
 	 * @return <class>com.capsuleCrm.WebPages.NewUserPage</class>
 	 */
 	public NewUserPage AddNewUser() {
+		if(deleteUserName.isDisplayed()) {
+			deleteUserName.click();
+			deleteUser.click();
+			deleteUserBtn.click();
+		}
 		newUserLink.click();
 		return new NewUserPage();
 	}

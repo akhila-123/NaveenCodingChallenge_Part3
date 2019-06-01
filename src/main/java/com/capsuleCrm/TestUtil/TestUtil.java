@@ -33,7 +33,7 @@ public class TestUtil extends TestBase {
 	public static int Medium_Wait = 10;
 	public static int Long_Wait = 20;
 	/* Test Data Sheet variables */
-	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+"\\src\\main\\java\\com\\capsuleCrm\\TestData\\CapsuleCRMTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+"/src/main/java/com/capsuleCrm/TestData/CapsuleCRMTestData.xlsx";
 	static Workbook book;
 	static Sheet sheet;
 
@@ -41,7 +41,7 @@ public class TestUtil extends TestBase {
 	/* Explicit wait */
 	public static void waitForElement(WebElement webElement) {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOf(webElement));
+		wait.until(ExpectedConditions.elementToBeClickable(webElement));
 	}
 
 	/*

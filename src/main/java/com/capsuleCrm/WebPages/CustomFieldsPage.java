@@ -49,7 +49,7 @@ public class CustomFieldsPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = customFieldsPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Account Page Header is not as expected");
-		System.out.println("Verified Custom Fields Page Header");
+		System.out.println("****Verified Custom Fields Page Header*****");
 	}
 
 }

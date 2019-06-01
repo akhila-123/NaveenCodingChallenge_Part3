@@ -3,6 +3,7 @@ AIM: Testing Capsule CRM application for below testcases
 Technologies: Java, Selenium WebDriver 3, TestNG, Extent Reports
 Design pattern: POM(Page Object Model)
 
+
 TestCases:
 Pre-Conditions (Manual Step):
 1.	Go to capsulecrm.com

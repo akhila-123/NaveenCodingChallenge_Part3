@@ -74,6 +74,9 @@ public class Locators {
 	public static final String OPPORTUNITIES_XPATH = "//a[@href='/settings/opportunities']";
 	public static final String NEWUSER_XPATH = "//a[text()='Add new User']";
 	public static final String VERIFYUSER_XPATH = "//table/tbody/tr[2]/td/a";
+	public static final String DELETEUSERNAME_XPATH = "//td/a[contains(@href,'/settings/users/')]";
+	public static final String DELETEUSER_XPATH = "//a[contains(@href,'#deleteUser')]";
+	public static final String DELETEUSERBTN_XPATH = "//a[text()='Delete']";
 	/* NewUser Page Locators */
 	public static final String FIRSTNAME_NU_ID = "register:firstnameDecorate:firstName";
 	public static final String LASTNAME_NU_ID = "register:lastNameDecorate:lastName";

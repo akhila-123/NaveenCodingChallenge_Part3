@@ -34,7 +34,7 @@ public class TestBase {
 		FileInputStream FIS;
 		try {
 			FIS = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\capsuleCrm\\Config\\Config.properties");
+					System.getProperty("user.dir") + "/src/main/java/com/capsuleCrm/Config/Config.properties");
 			prop = new Properties();
 			prop.load(FIS);
 
@@ -59,7 +59,7 @@ public class TestBase {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
 			options.addArguments("--disable-notifications");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} else if (Browser.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
 		}
