@@ -55,7 +55,7 @@ public class AppearancePage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = appearancePageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Appearance Page Header is not as expected");
-		System.out.println("*****Verified Appearances Page Header*****");
+		System.out.println("5.Verified Appearances Page Header.");
 	}
 	
 	/**

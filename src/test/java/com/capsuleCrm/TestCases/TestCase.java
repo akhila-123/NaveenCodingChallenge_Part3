@@ -93,7 +93,7 @@ public class TestCase extends TestBase {
 		newpersonpage = PAndOpage.ClickOnAddPerson();
 		PAndOpage = newpersonpage.FillPersonDetailsAndSave(Title, FirstName, LastName, JobTitle, Organisation,
 				PersonTag, PhoneNumber, EmailId, Website);
-		PAndOpage.VerifyThePersonCreated(FirstName, LastName);
+		PAndOpage.VerifyThePersonCreated(Title, FirstName, LastName);
 		homepage = PAndOpage.ClickOnHomeIcon();
 		casespage = homepage.ClickOnCaseIcon();
 		newcasepage = casespage.AddCase();
@@ -109,7 +109,7 @@ public class TestCase extends TestBase {
 
 	@Test(priority = 2, dataProvider = "getNewUserData")
 	public void VerifyAccountSettingsOptionsTest(String FirstName, String LastName, String EmailAddress,
-			String Username) {
+			String Username, String Name, String Tag, String TaskDescription, String DueDays, String AssigneeName) {
 		loginpage = new LoginPage();
 		homepage = loginpage.EnterCredentials(prop.getProperty("username"), prop.getProperty("password"));
 		accountsettingspage = homepage.OpenAccountSettingsPage();
@@ -132,13 +132,13 @@ public class TestCase extends TestBase {
 		userspage.VerifyUserCreated(FirstName, LastName);
 		opportunitiespage = userspage.OpenOpportunitiesPage();
 		opportunitiespage.VerifyHeader(prop.getProperty("OpportunitiesPageHeader"));
-		opportunitiespage.AddNewCategory(prop.getProperty("NewMilestoneName"),
+		String MilestoneName = opportunitiespage.AddNewMilestone(prop.getProperty("NewMilestoneName"),
 				prop.getProperty("ProbabilityOfWinning"));
+		opportunitiespage.VerifyNewMilestone(MilestoneName);
 		trackspage = opportunitiespage.OpenTracksPage();
 		trackspage.VerifyHeader(prop.getProperty("TracksPageHeader"));
 		newopportunitytrackpage = trackspage.OpenAddNewTrackLink();
-		trackspage = newopportunitytrackpage.FillDetailsAndSave(prop.getProperty("Name"), prop.getProperty("Tag"),
-				prop.getProperty("TaskDescription"), prop.getProperty("DueDays"), prop.getProperty("UserName"));
+		trackspage = newopportunitytrackpage.FillDetailsAndSave(Name, Tag, TaskDescription, DueDays, AssigneeName);
 		trackspage.VerifyTheTrackCreated(prop.getProperty("Name"));
 		taskCategoriespage = trackspage.OpenTaskCategoriesPage();
 		taskCategoriespage.VerifyHeader(prop.getProperty("TaskCategoriesPageHeader"));
@@ -165,7 +165,7 @@ public class TestCase extends TestBase {
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//screenshots//screenshot.png"));
-			} catch (IOException e) { 
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}

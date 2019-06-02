@@ -49,7 +49,7 @@ public class MailDropBoxPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = mailDropBoxPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Invoices Page Header is not as expected");
-		System.out.println("*****Verified MailDropBox Page Header*****");
+		System.out.println("6.Verified MailDropBox Page Header.");
 	}
 
 }

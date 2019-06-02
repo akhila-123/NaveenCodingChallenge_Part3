@@ -25,7 +25,7 @@ public class PeopleAndOrgPage extends TestBase {
 	WebElement homeIcon;
 
 	@FindBy(xpath = Locators.VERIFYNAME_XPATH)
-	List<WebElement> verifyName;
+	WebElement verifyName;
 
 	/**
 	 * Constructs a new People And Organization Page object, using the driver
@@ -68,14 +68,11 @@ public class PeopleAndOrgPage extends TestBase {
 	 * @param firstName and lastName
 	 */
 
-	public void VerifyThePersonCreated(String firstName, String lastName) {
-		for (int i = 0; i < verifyName.size(); i++) {
-			if (verifyName.get(i).getText().equals((firstName + " " + lastName))) {
-				System.out.println("****Verified the Person created with actual--" + verifyName.get(i).getText()
-						+ ",expected--" + firstName + " " + lastName + "****");
-			}
-
-		}
+	public void VerifyThePersonCreated(String Title,String firstName, String lastName) {
+		String actual =verifyName.getText();
+		String expected = Title+" "+firstName+" "+lastName;
+		Assert.assertTrue(actual.equals(expected), "Person name is not as expected");
+		System.out.println("2.Verified the person created with person name.");
 
 	}
 

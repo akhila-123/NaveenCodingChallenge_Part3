@@ -5,7 +5,7 @@
     <classes>
       <class name="com.capsuleCrm.TestCases.TestCase">
         <methods>
-          <include name="VerifyAccountSettingsOptionsTest" invocation-numbers="0"/>
+          <include name="AgentVerification" invocation-numbers="0"/>
           <include name="TearDown"/>
           <include name="SetUp"/>
         </methods>

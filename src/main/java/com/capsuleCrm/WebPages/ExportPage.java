@@ -51,7 +51,7 @@ public class ExportPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = exportPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Export Page Header is not as expected");
-		System.out.println("*****Verified Export Page Header*****");
+		System.out.println("4.Verified Export Page Header.");
 	}
 
 }

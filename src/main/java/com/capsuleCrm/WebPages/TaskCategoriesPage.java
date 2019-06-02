@@ -33,11 +33,9 @@ public class TaskCategoriesPage extends TestBase {
 
 	@FindBy(xpath = Locators.CUSTOMFIELDS_XPATH)
 	WebElement customFieldsLink;
-	
+
 	@FindBy(xpath = Locators.VERIFYCATEGORY_XPATH)
 	List<WebElement> verifyCategory;
-	
-	
 
 	/**
 	 * Constructs a new Task Categories Page object, using the driver created in
@@ -72,7 +70,7 @@ public class TaskCategoriesPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = taskCategoriesPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Account Page Header is not as expected");
-		System.out.println("****Verified the Task Categories Page Header****");
+		System.out.println("16.Verified the Task Categories Page Header.");
 	}
 
 	/**
@@ -89,20 +87,25 @@ public class TaskCategoriesPage extends TestBase {
 		String NewCategoryName = NewCategory + TestUtil.gettimestamp();
 		newCategoryName.sendKeys(NewCategoryName);
 		saveBtn.click();
+		System.out.println("17.New Category Added.");
 		TestUtil.waitForElement(customFieldsLink);
 		return NewCategoryName;
 	}
 
 	/**
-	 *Verifies the New Category created in Task Categories Page 
+	 * Verifies the New Category created in Task Categories Page
 	 * 
 	 * @param New Category name
 	 */
 
 	public void VerifyTheCategoryCreated(String NewCategory) {
 		for (int i = 0; i < verifyCategory.size(); i++) {
-			if ((verifyCategory.get(i).getText()).equals(NewCategory)) {
-				System.out.println("****Verified the new category created****");
+			try {
+				if ((verifyCategory.get(i).getText()).equals(NewCategory)) {
+					System.out.println("18.Verified the new category created.");
+				}
+			} catch (Exception e) {
+
 			}
 		}
 

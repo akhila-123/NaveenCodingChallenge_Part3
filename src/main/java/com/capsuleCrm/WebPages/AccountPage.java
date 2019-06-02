@@ -38,7 +38,7 @@ public class AccountPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = accountPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Account Page Header is not as expected");
-		System.out.println("*****Verified Account Page Header*****");
+		System.out.println("2.Verified Account Page Header.");
 	}
 
 	/**

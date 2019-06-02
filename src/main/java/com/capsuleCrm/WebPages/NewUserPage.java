@@ -50,7 +50,7 @@ public class NewUserPage extends TestBase{
 		emailAddress.sendKeys(EmailAddress);
 		username.sendKeys(Username);
 		inviteUserBtn.click();
-		System.out.println("****New User is sucessfully created****");
+		System.out.println("8.New User is sucessfully created.");
 		return new UsersPage();
 	}
 

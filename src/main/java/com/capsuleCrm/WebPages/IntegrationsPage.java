@@ -54,14 +54,14 @@ public class IntegrationsPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = integrationsPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Integrations Page Header is not as expected");
-		System.out.println("****Verified Integrations Page Header****");
+		System.out.println("23.Verified Integrations Page Header.");
 	}
 	/**
 	 * Verifies the total number of Configure Buttons present in Integrations Page and prints them 
 	 */
 
 	public void VerfiyNumberOfConfigureButtons() {
-		System.out.println("Total no of configure buttons on Integrations page are -"+configureBtnList.size());
+		System.out.println("24.Total no of configure buttons on Integrations page are -"+configureBtnList.size());
 		
 	}
 

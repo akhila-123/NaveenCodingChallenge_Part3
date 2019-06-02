@@ -53,7 +53,7 @@ public class AccountSettingsPage extends TestBase {
 	 */
 	public void VerifyPageHeader(String AccountSettingsPageHeader) {
 		Assert.assertTrue(accountSettingsPageHeader.getText().equals( AccountSettingsPageHeader),"Account Settings Page Header is not as expected");
-		System.out.println("*****Verified Account Settings Page Header*****");
+		System.out.println("1.Verified Account Settings Page PageHeader.");
 		
 	}
 

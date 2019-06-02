@@ -61,7 +61,7 @@ public class NewCasePage extends TestBase{
 		caseTags.sendKeys(CaseTags);
 		caseAddTags.click();
 		saveBtn.click();
-		System.out.println("**************New Case is sucessfully created.***********");
+		System.out.println("3.New Case is sucessfully created.");
 		return new CasesPage();
 	}
 

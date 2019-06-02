@@ -63,7 +63,7 @@ public class NewPersonPage extends TestBase {
 		emailAddress.sendKeys(EmailId);
 		website.sendKeys(Website);
 		saveBtn.click();
-		System.out.println("**************New Person is sucessfully created.***********");
+		System.out.println("1.New Person is sucessfully created.");
 		return new PeopleAndOrgPage();
 
 	}

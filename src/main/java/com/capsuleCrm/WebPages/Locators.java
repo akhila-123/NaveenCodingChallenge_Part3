@@ -23,7 +23,7 @@ public class Locators {
 	public static final String ADDPERSON_XPATH = "//a[text()='Add Person']";
 	public static final String SELECTPERSON_XPATH = "//a[text()='' and @id='ember348']";
 	public static final String HOMEICON_XPATH = "//a[@aria-label='Dashboard']";
-	public static final String VERIFYNAME_XPATH = "//table/tbody/tr[@class='tooltipper list-results-row ember-view']/td[3]/a";
+	public static final String VERIFYNAME_XPATH = "//span[@class='party-details-title']";
 	/* New Person Page locators */
 	public static final String TITLE_NAME = "party:j_id108:j_id116";
 	public static final String FIRSTNAME_ID = "party:fnDecorate:fn";
@@ -90,11 +90,12 @@ public class Locators {
 	public static final String MILESTONENAME_XPATH = "//*[@class='form-input-text milestone-modal-name']";
 	public static final String PB_XPATH = "//input[@class='form-input-text milestone-modal-probability']";
 	public static final String MILESTONESAVEBTN_XPATH = "//button[text()='Save']";
+	public static final String VERIFYMILESTONE_XPATH = "//button[@class='hyperlink-button milestone-item-edit']";
 	/* Tracks Page Locators */
 	public static final String TRACKSPAGEHEADER_XPATH = "//h2[@class='settings-page-header']";
 	public static final String TASKCATEGORIES_XPATH = "//a[text()='Task Categories']";
 	public static final String ADDNEWTRACK_XPATH = "//a[text()='Add new Track']";
-	public static final String VERIFYTRACK_XPATH = "//table/tbody/tr/td/span/a";
+	public static final String VERIFYTRACK_XPATH = "//td/a";
 	/* New Opportunity Track Page Locators */
 	public static final String NEWNAME_ID = "j_id123:trackDescriptionDecorate:trackDescription";
 	public static final String TAG_ID = "j_id123:trackTagDecorate:trackTag";
@@ -108,7 +109,7 @@ public class Locators {
 	public static final String CATEGORYNAME_ID = "editCategoryForm:taskCategoryNameDecorate:taskCategoryName";
 	public static final String CATEGORYSAVEBTN_ID = "editCategoryForm:j_id175";
 	public static final String CUSTOMFIELDS_XPATH = "//a[@href='/settings/customfields/party']";
-	public static final String VERIFYCATEGORY_XPATH = "//table/tbody/tr/td/span/a";
+	public static final String VERIFYCATEGORY_XPATH = "//td[@class=' list-column-left']/a";
 	/* Custom Fields Page Locators */
 	public static final String CUSTOMFIELDSPAGEHEADER_XPATH = "//h2[@class='settings-page-header']";
 	public static final String TAGS_XPATH = "//a[text()='Tags']";

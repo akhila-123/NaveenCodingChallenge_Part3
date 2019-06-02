@@ -62,7 +62,7 @@ public class NewOpportunityTrackPage extends TestBase {
 		Select select = new Select(assigneeDropdown);
 		select.selectByVisibleText(UserName);
 		saveBtn.click();
-		System.out.println("***New Opportunity Track is created*****");
+		System.out.println("14.New Opportunity Track is created.");
 		return new TracksPage();
 	}
 

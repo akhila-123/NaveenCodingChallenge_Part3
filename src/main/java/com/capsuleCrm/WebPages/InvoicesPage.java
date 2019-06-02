@@ -54,7 +54,7 @@ public class InvoicesPage extends TestBase {
 		TestUtil.waitForElement(invoicesPageHeader);
 		String ActualPageHeader = invoicesPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Invoices Page Header is not as expected");
-		System.out.println("*****Verified Invoices Page Header*****");
+		System.out.println("3.Verified Invoices Page Header.");
 	}
 
 }

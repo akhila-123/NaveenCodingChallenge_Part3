@@ -76,12 +76,12 @@ public class CasesPage extends TestBase {
 	public void VerifyTheCaseCreated(String name, String status, String firstName, String lastName) {
 		TestUtil.waitForElement(caseName);
 		Assert.assertEquals(caseName.getText(), name);
-		System.out.println("****Verified the case name with actual --" + caseName.getText() + ",expected--" + name+"****");
+		System.out.println("4.Verified the case name with actual --" + caseName.getText() + ",expected--" + name);
 		Assert.assertEquals(caseStatus.getText(), status);
-		System.out.println("****Verified the case status with actual --" + caseStatus.getText() + ",expected--" + status+"****");
+		System.out.println("5.Verified the case status with actual --" + caseStatus.getText() + ",expected--" + status);
 		Assert.assertEquals(personName.getText(), firstName + " " + lastName);
-		System.out.println("****Verified the case opened against person with actual --" + personName.getText()
-				+ ",expected--" + firstName + " " + lastName+"****");
+		System.out.println("6.Verified the case opened against person with actual --" + personName.getText()
+				+ ",expected--" + firstName + " " + lastName);
 
 	}
 

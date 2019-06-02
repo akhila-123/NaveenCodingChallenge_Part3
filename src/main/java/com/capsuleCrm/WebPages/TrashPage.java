@@ -34,7 +34,7 @@ public class TrashPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = trashPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Account Page Header is not as expected");
-		System.out.println("****Verified the Trash Page Header  value****");
+		System.out.println("25.Verified the Trash Page Header  value.");
 	}
 
 }

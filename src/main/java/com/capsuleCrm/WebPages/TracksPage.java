@@ -59,7 +59,7 @@ public class TracksPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = tracksPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Account Page Header is not as expected");
-		System.out.println("****Verified the Tracks Page Header****");
+		System.out.println("13.Verified the Tracks Page Header.");
 	}
 	/**
 	 * Clicks on Add new Track link of Tracks Page and It then waits for
@@ -80,7 +80,7 @@ public class TracksPage extends TestBase {
 	public void VerifyTheTrackCreated(String Name) {
 		for (int i = 0; i < verifyTrack.size(); i++) {
 			if ((verifyTrack.get(i).getText()).equals(Name)){
-				System.out.println("****Verified the new track created****");
+				System.out.println("15.Verified the new track created.");
 			}
 		}
 		

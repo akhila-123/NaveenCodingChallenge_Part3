@@ -1,5 +1,7 @@
 package com.capsuleCrm.WebPages;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,7 +67,7 @@ public class UsersPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = usersPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Users Page Header is not as expected");
-		System.out.println("****Verified the user page header****");
+		System.out.println("7.Verified the user page header.");
 	}
 	/**
 	 * Clicks on Add new User link of User Page and It then waits for
@@ -75,11 +77,13 @@ public class UsersPage extends TestBase {
 	 * @return <class>com.capsuleCrm.WebPages.NewUserPage</class>
 	 */
 	public NewUserPage AddNewUser() {
-		if(deleteUserName.isDisplayed()) {
+		try {
+			if(deleteUserName != null) {
 			deleteUserName.click();
 			deleteUser.click();
 			deleteUserBtn.click();
-		}
+			}}catch(Exception e) {
+			}
 		newUserLink.click();
 		return new NewUserPage();
 	}
@@ -93,9 +97,7 @@ public class UsersPage extends TestBase {
 		String ActualUser=verifyUser.getText();
 		String ExpectedUser=FirstName+" "+LastName;
 		Assert.assertTrue(ActualUser.equals(ExpectedUser), "UserCreated is not as expected");
-		System.out.println("****Verified the user created****");
-		
-		
+		System.out.println("9.Verified the user created.");	
 	}
 	
 

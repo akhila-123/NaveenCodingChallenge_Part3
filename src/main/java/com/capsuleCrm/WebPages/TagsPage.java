@@ -53,6 +53,7 @@ public class TagsPage extends TestBase {
 	 * @return <class>com.capsuleCrm.WebPages.IntegrationsPage</class>
 	 */
 	public IntegrationsPage OpenIntegrationsPage() {
+		TestUtil.waitForElement(integrationsLink);
 		integrationsLink.click();
 		return new IntegrationsPage();
 	}
@@ -64,7 +65,7 @@ public class TagsPage extends TestBase {
 	public void VerifyHeader(String ExpectedPageHeader) {
 		String ActualPageHeader = tagsPageHeader.getText();
 		Assert.assertTrue(ActualPageHeader.equals(ExpectedPageHeader), "Tags Page Header is not as expected");
-		System.out.println("****Verfied the Tags Page Header****");
+		System.out.println("20.Verfied the Tags Page Header.");
 	}
 
 	/**
@@ -80,6 +81,7 @@ public class TagsPage extends TestBase {
 		String NewTagName = TagName + TestUtil.gettimestamp();
 		newTagName.sendKeys(NewTagName);
 		saveBtn.click();
+		System.out.println("21.New Tag Added.");
 		return NewTagName;
 
 	}
@@ -92,8 +94,11 @@ public class TagsPage extends TestBase {
 
 	public void VerifyTheTagCreated(String NewTagName) {
 		for (int i = 0; i < verifyTag.size(); i++) {
+			try {
 			if ((verifyTag.get(i).getText()).equals(NewTagName)) {
-				System.out.println("****Verified the new tag created****");
+				System.out.println("22.Verified the new tag created.");
+			}}catch(Exception e) {
+				
 			}
 		}
 
